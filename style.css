@@ -1,0 +1,55 @@
+@font-face{font-family:SM3KGothic;src:url("assets/SM3KGothic.otf") format("opentype");font-weight:400;font-display:swap}@font-face{font-family:SM3JGothic;src:url("assets/SM3JGothic.otf") format("opentype");font-weight:400;font-display:swap}*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font-family:SM3KGothic,'Apple SD Gothic Neo','Malgun Gothic',sans-serif}button,input{font:inherit;color:inherit}button{cursor:pointer}#canvas{position:relative;width:1482px;margin:0 auto;min-height:930px}header{height:124px}header img{display:block;width:1482px;height:124px}aside{position:absolute;left:20px;top:134px;width:70px;font-size:12px}.legend{font-size:13px;line-height:1.3;margin-bottom:15px}.legend p{margin:0 0 6px;white-space:nowrap;display:flex;align-items:center;gap:8px}i{display:inline-block;width:12.541px;height:12.541px;border-radius:50%;flex:none}.orange{background:#ff703e}.blue{background:#0239ff}aside section{width:48px;margin-bottom:11px}h2{font-size:15.797px;font-weight:400;margin:0 0 8px;text-align:center;border-bottom:.83px solid;padding-bottom:3px;white-space:nowrap}aside button{display:block;background:none;border:0;padding:0;margin:0 0 3px;text-align:left;white-space:nowrap;line-height:1.3}aside button.active{color:#000;text-decoration:none}#initials button{font-size:13px;line-height:14.8px}#eras button{font-size:12px;line-height:16px}#categories button{font-size:11.38px;line-height:17px}#reset{margin-top:15px;font-size:11px;border-bottom:1px solid}main{position:relative;margin-left:154px;width:1278px;padding-top:11px}.table-head{display:grid;grid-template-columns:395px 393px 392px 98px;height:25px;background:#000;color:#fff;align-items:center}.table-head button{height:25px;border:0;background:none;text-align:left;padding:0 2px;font-size:18px;line-height:1;display:flex;align-items:center}.table-head span{margin-left:auto;padding-right:3px}.row{display:grid;grid-template-columns:395px 393px 392px 98px;min-height:35px;width:100%;border:0;border-bottom:1px solid #000;background:white;text-align:left;padding:0;align-items:center;font-size:18px;line-height:1.25}.row>span{padding:5px 0}.row .word{display:flex;align-items:center;gap:9px}.row .word i{width:8px;height:8px}.meaning{grid-column:1/-1;font-size:15px;line-height:1.65;padding:4px 0 12px!important;max-width:1100px}.tools{position:absolute;right:0;top:-18px;display:flex;align-items:center;gap:12px;font-size:10px}.tools input{border:0;border-bottom:1px solid #aaa;width:130px;background:transparent;padding:2px;font-size:11px}.tools button{background:none;border:0;padding:0}#empty{padding:35px 0;font-size:16px}dialog{width:570px;max-width:90vw;border:1px solid;padding:35px;background:#fff}dialog::backdrop{background:#0005}dialog form button{position:absolute;right:15px;top:10px;border:0;background:none;font-size:26px}dialog h1{font-size:32px;font-weight:400}#detail-meta{font-size:13px}#detail-meaning{font-size:18px;line-height:1.7}@media(max-width:1482px){#canvas{margin:0;zoom:calc(100vw / 1482px)}}
+
+aside{font-family:SM3KGothic,sans-serif}aside button,aside h2{font-family:inherit;font-weight:400}
+
+/* Original prototype: fixed sidebar coordinates and in-row expansion */
+aside{top:134px}aside section{position:absolute;margin:0}aside section:nth-of-type(1){top:50px}aside section:nth-of-type(2){top:336.204px}aside section:nth-of-type(3){top:616px}aside h2{border:0;padding:0;margin:0}#initials{position:absolute;top:37px;left:3.316px;width:14px}#eras{position:absolute;top:37px;left:3px;width:50px}#categories{position:absolute;top:37px;left:3px;width:60px}#initials button{height:17.44px;line-height:17.44px;margin:0}#eras button{height:20px;line-height:20px;margin:0}#categories button{height:20.768px;line-height:20.768px;margin:0}aside section::after{content:'';position:absolute;top:26px;left:1.2px;width:44.17px;border-top:1.5px solid #000}aside button.active{color:#000}main{padding-top:11px}.row[aria-expanded=true]{color:#ff703e}/* Expanded content shares the table's four column tracks. */
+.inline-detail{display:grid;grid-template-columns:395px 393px 392px 98px;grid-template-rows:auto auto;align-items:start;row-gap:6px;width:100%;padding-bottom:12px;border-bottom:2px dotted #000;font-family:SM3KGothic,sans-serif}
+.inline-meaning{grid-column:1;grid-row:1 / 3;padding-right:30px;font-size:17px;line-height:23px}
+.inline-meaning p{margin:0 0 1px;white-space:pre-line;word-break:keep-all;overflow-wrap:anywhere}
+.inline-meaning .status{display:block;width:15px;height:15px;margin:5px 0 8px;padding:0;border-radius:50%;background:#ff703e}.inline-detail.is-current .status{background:#0239ff}
+.inline-photo{position:relative;grid-row:1;width:344px;height:219px;margin:0}
+.photo-0{grid-column:2}.photo-1{grid-column:3}
+.inline-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.inline-photo::after{content:attr(data-marker);position:absolute;top:0;left:calc(var(--photo-visible-width, 100%) + 5px);font-size:14px;line-height:1}
+.inline-note{grid-column:2;grid-row:2;width:344px;font-size:14px;line-height:19px;margin:0;white-space:pre-line;word-break:keep-all;overflow-wrap:anywhere}
+.inline-captions{grid-column:4;grid-row:2;font-size:9.58px;line-height:15px;word-break:keep-all}
+.inline-captions p{margin:0 0 22px}.inline-captions p:last-child{margin-bottom:0}
+.inline-captions .caption-marker{display:block}
+.inline-detail:not(:has(.inline-photo)){min-height:120px}
+.inline-detail:not(:has(.inline-photo)) .inline-meaning{grid-column:1;grid-row:1;padding:0 30px 12px 0}
+
+
+
+
+/* Figma hover: full row fill with white text. */
+.row:hover,.row:focus-visible{background:#ff703e;color:#fff}
+.row.is-current:hover,.row.is-current:focus-visible{background:#0239ff;color:#fff}
+
+/* Dotted separators between vocabulary rows. */
+.row,.inline-detail{border-bottom:2px dotted #000}
+
+/* Filter items: medium Gothic normally, display Gothic when selected. */
+aside button{font-family:SM3JGothic,sans-serif;font-weight:400;text-decoration:none}
+aside button.active{font-family:SM3KGothic,sans-serif;font-weight:400;text-decoration:none}
+
+@font-face{font-family:SM3SJGothic;src:url("assets/SM3SJGothic-03.otf") format("opentype");font-weight:400;font-display:swap}
+.row{font-family:SM3SJGothic,sans-serif;font-weight:400}
+.row:hover,.row:focus-visible{font-family:SM3KGothic,sans-serif}
+
+.legend i{width:15px;height:15px}
+
+/* Selected rows retain display Gothic after the pointer leaves. */
+.row[aria-expanded="true"]{font-family:SM3KGothic,sans-serif;color:#ff703e}
+.row.is-current[aria-expanded="true"]{color:#0239ff}
+.row[aria-expanded="true"]:hover,.row[aria-expanded="true"]:focus-visible{color:#fff}
+
+.number-heading{display:flex;align-items:center;height:25px;min-width:0}
+.number-heading [data-sort]{flex:1}
+.table-head #reset-order{flex:none;justify-content:center;width:23px;padding:0 3px}
+
+/* One shared left edge for all sidebar filter content. */
+aside section{left:0}
+aside h2{text-align:left}
+aside section::after{left:0}
+#initials,#eras,#categories{left:0}
